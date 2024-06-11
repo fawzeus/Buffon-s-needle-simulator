@@ -1,14 +1,14 @@
 #include "stick.hpp"
 #include <bits/stdc++.h> 
 Stick::Stick(){
-    x = rand()%WIDTH;
+    x = rand()%WIDTH+l;
     y = rand()%HEIGHT; 
     len=l;
     angle = (double)rand() / RAND_MAX  * TWO_PI;
 }
 
 void Stick::draw(sf::RenderWindow &window, long long &number_of_stick_touch_lines){
-    sf::Color color=sf::Color::White;
+    sf::Color color=sf::Color::Black;
     double dx = (len / 2.0) * cos(angle);
     double dy = (len / 2.0) * sin(angle);
     sf::Vector2f point1(x-dx, y-dy);
