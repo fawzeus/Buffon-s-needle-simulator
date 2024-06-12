@@ -41,5 +41,5 @@ Make sure you have the following installed:
 After building the project, run the simulator using:
 
 ```sh
-./simulator
+./bin/simulator
 ```
