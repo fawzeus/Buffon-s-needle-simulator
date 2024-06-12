@@ -9,10 +9,10 @@ CFLAGS  = -std=c++11 -Wall
 # SFML libraries
 SFML_LIBRARIES = -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
 
-SOURCE = *.cpp
+SOURCE = ./src/*.cpp
 
 # The build target
-TARGET = simulator
+TARGET = ./bin/simulator
 
 all: $(TARGET)
 	@echo "\n Build completed successfully! Run ./$(TARGET) to execute your program !"

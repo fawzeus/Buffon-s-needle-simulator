@@ -1,6 +1,4 @@
 #include "utils.hpp"
-#include <iomanip>
-#include <sstream>
 void draw_lines(sf::RenderWindow &window) {
     float thickness = 2.0f;
     sf::RectangleShape line;
@@ -12,6 +10,7 @@ void draw_lines(sf::RenderWindow &window) {
         window.draw(line);
     }
 }
+
 
 void clearArea(sf::RenderWindow &window, sf::Color color,sf::FloatRect &area) {
     //sf::FloatRect areaToClear(0,0, 230, 30); // Position and size of the area
@@ -97,3 +96,8 @@ void draw_text(sf::RenderWindow &window, int total, int crossing, sf::Font font)
     window.draw(text_result);
 }
 
+void draw_sticks(std::vector<Stick> sticks,sf::RenderWindow& window, long long &number_of_sticks_touching_line){
+    for(Stick stick:sticks){
+        stick.draw(window,number_of_sticks_touching_line);
+    }
+}
